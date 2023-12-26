@@ -2,6 +2,9 @@
 
 sudo apt update
 
+sudo apt-get install -y git
+git config --global core.autocrlf false
+
 # for OpenJDK
 sudo apt-get install -y zip unzip autoconf make
 
