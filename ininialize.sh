@@ -5,6 +5,15 @@ sudo apt update
 # for OpenJDK
 sudo apt-get install -y zip unzip autoconf make
 
+git clone https://github.com/openjdk/jtreg.git /mnt/d/dev/jtreg
+git clone https://github.com/openjdk/jdk.git /mnt/d/dev/jdk
+# Install Microsoft Visual Studio Community Edition
+# Install the latest OpenJDK for Windows
+# cd /mnt/d/dev/jtreg; bash make/build.sh --jdk <OpenJDK on Linux>
+# cd /mnt/d/dev/jdk; bash configure --with-boot-jdk=/mnt/d/opt/jdks/jdk-22 --with-toolchain-version=2022 --with-jtreg=/mnt/d/dev/jtreg/build/images/jtreg
+# make images
+# make test-tier1
+
 # for PDF Combine
 sudo apt install -y poppler-utils
 
