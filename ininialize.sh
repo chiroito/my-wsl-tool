@@ -10,6 +10,8 @@ sudo apt-get install -y zip unzip autoconf make
 
 git clone https://github.com/openjdk/jtreg.git /mnt/d/dev/jtreg
 git clone https://github.com/openjdk/jdk.git /mnt/d/dev/jdk
+locale-gen en_US.UTF-8; update-locale LANG=en_US.UTF-8; export LANG=en_US.UTF-8
+export JTREG="VM_OPTIONS=-Duser.language=en -Duser.country=US"
 # Install Microsoft Visual Studio Community Edition
 # Install the latest OpenJDK for Windows
 # cd /mnt/d/dev/jtreg; bash make/build.sh --jdk <OpenJDK on Linux>
