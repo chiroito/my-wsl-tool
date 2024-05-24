@@ -4,6 +4,9 @@ sudo apt update
 
 sudo apt-get install -y git
 git config --global core.autocrlf false
+git config --system core.longpaths true
+git config --global core.symlinks true
+# ローカルセキュリティーポリシーでシンボリックリンクの権限付与も必要
 
 # for OpenJDK
 sudo apt-get install -y zip unzip autoconf make
