@@ -6,6 +6,10 @@ sudo apt-get install -y git
 git config --global core.autocrlf false
 git config --system core.longpaths true
 git config --global core.symlinks true
+// Gitで鍵を使う
+git config --global commit.gpgsign true
+git config --global gpg.program "c:\Program Files (x86)\GnuPG\bin\gpg"
+git config --global user.signingkey <自分の鍵>
 # ローカルセキュリティーポリシーでシンボリックリンクの権限付与も必要
 
 # for OpenJDK
