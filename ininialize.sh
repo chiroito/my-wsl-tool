@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo apt update
+sudo apt-get install -y update-alternatives
 
 sudo apt-get install -y git
 git config --global core.autocrlf false
@@ -35,3 +36,9 @@ sudo apt-get install -y build-essential libz-dev zlib1g-dev
 # for Quarkus
 sudo apt-get install -y openjdk-17-jre-headless maven
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
+# SSH
+sudo apt-get install -y openssh-server net-tools
+adduser <自分のユーザ>
+netsh.exe interface portproxy show v4tov4
+netsh.exe interface portproxy add v4tov4 listenport=22 connectaddress=192.168.0.1
