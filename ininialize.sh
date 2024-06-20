@@ -45,3 +45,6 @@ netsh.exe interface portproxy add v4tov4 listenport=22 connectaddress=192.168.0.
 # OpenShift
 # ocのダウンロード
 # kubeconifgを.kube/configとして保存
+
+# TODO: そのうち設定ファイルへ入れる
+export PS1="[\u@\h \D{%Y%m%d-%H:%M:%S}]\$ "
