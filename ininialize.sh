@@ -15,6 +15,13 @@ git config --global user.signingkey <自分の鍵>
 # for OpenJDK
 sudo apt-get install -y zip unzip autoconf make
 
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install java 24-tem
+# ローカルの JDK を登録
+# sdk install java 24-tem-win /mnt/d/opt/jdks/temurin-24+36
+# sdk use java 24-tem-win
+
 git clone https://github.com/openjdk/jtreg.git /mnt/d/dev/jtreg
 git clone https://github.com/openjdk/jdk.git /mnt/d/dev/jdk
 locale-gen en_US.UTF-8; update-locale LANG=en_US.UTF-8; export LANG=en_US.UTF-8
@@ -33,8 +40,7 @@ sudo apt install -y poppler-utils
 sudo apt-get install -y build-essential libz-dev zlib1g-dev
 
 # for Quarkus
-sudo apt-get install -y openjdk-21-jre-headless maven
-export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+sudo apt-get install -y maven
 
 # SSH
 sudo apt-get install -y openssh-server net-tools
