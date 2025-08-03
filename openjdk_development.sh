@@ -27,12 +27,12 @@ export LANG=en_US.UTF-8
 # build JTREG
 export JTREG="VM_OPTIONS=-Duser.language=en -Duser.country=US"
 git clone https://github.com/openjdk/jtreg.git ${JTREG_DIR}
-cd /mnt/d/dev/jtreg
+cd ${JTREG_DIR}
 bash make/build.sh --jdk `sdk home java ${LATEST_LINUX_JDK}`
 
 # build OpenJDK 
 git clone https://github.com/${OPENJDK_REPO_USER}/jdk.git ${JDK_DIR}
-cd /mnt/d/dev/jdk
+cd ${JDK_DIR}
 
 # for Windows
 bash configure --with-jtreg=${JTREG_DIR}/build/images/jtreg --with-boot-jdk=${LATEST_WINDOWS_JDK_DIR} --with-toolchain-version=2022
