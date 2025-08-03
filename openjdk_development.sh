@@ -1,5 +1,6 @@
 # on WSL1
 # You must install one of the latest major openjdk binary on windows to build openjdk
+# and install Microsoft Visual Studio Community Edition
 
 LATEST_WINDOWS_JDK_DIR=/mnt/d/opt/jdks/temurin-24+36
 LATEST_LINUX_JDK=24-tem
